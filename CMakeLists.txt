@@ -14,13 +14,38 @@ else()
 endif()
 
 set(SOURCES
-  # add list of source files
+	src/Bubble.cpp
+	src/Insert.cpp
+	src/Merge.cpp
+	src/OpState.cpp
+	src/Quick.cpp
+	src/Radix.cpp
+	src/Select.cpp
+	src/SortData.cpp
+	src/SortDataBase.cpp
+	src/SortError.cpp
+	src/Sorter.cpp
+	src/SortSeparateData.cpp
+	src/SortTech.cpp
+	src/SortTechFactory.cpp
 )
 
 set(HEADERS
-  # add list of header files
+	src/Bubble.h
+	src/Insert.h
+	src/Merge.h
+	src/OpState.h
+	src/Quick.h
+	src/Radix.h
+	src/Select.h
+	src/SortData.h
+	src/SortDataBase.h
+	src/SortError.h
+	src/Sorter.h
+	src/SortSeparateData.h
+	src/SortTech.h
+	src/SortTechFactory.h
 )
-
 
 add_library(SortLib SHARED ${SOURCES} ${HEADERS})
 
@@ -30,18 +55,18 @@ target_compile_definitions(SortLib PRIVATE BUILDING_CLIENT_DLL)
 
 
 
-#enable_testing()
+enable_testing()
 
-#set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-#add_subdirectory(externals/googletest)
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+add_subdirectory(externals/googletest)
 
-#add_executable(test_sort1 src/tests/smoke/test_sort1.cpp)
-#target_link_libraries(test_sort1 gtest gtest_main SortLib)
-#target_include_directories(test_sort1 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
+add_executable(test_sort1 src/tests/test_sort1.cpp)
+target_link_libraries(test_sort1 gtest gtest_main SortLib)
+target_include_directories(test_sort1 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
 
-#add_executable(test_sort2 src/tests/smoke/test_sort2.cpp)
-#target_link_libraries(test_sort2 gtest gtest_main SortLib)
-#target_include_directories(test_sort2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
+add_executable(test_sort2 src/tests/test_sort2.cpp)
+target_link_libraries(test_sort2 gtest gtest_main SortLib)
+target_include_directories(test_sort2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
 
-#add_test(NAME test_sort1 COMMAND test_sort1)
-#add_test(NAME test_sort2 COMMAND test_sort2)
+add_test(NAME test_sort1 COMMAND test_sort1)
+add_test(NAME test_sort2 COMMAND test_sort2)
