@@ -1,0 +1,3 @@
+class Bubble
+!!!136194.cpp!!!	sort(inout data : SortData<T>) : SortError
+return SE_SUCCESS;
