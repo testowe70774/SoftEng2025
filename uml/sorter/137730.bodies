@@ -1,0 +1,3 @@
+class SortSeparateData
+!!!136066.cpp!!!	swap(inout sorted : typename Container<T>) : SortError
+return SE_SUCCESS;

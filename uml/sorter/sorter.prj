@@ -1,0 +1,1401 @@
+format 224
+"sorter"
+  revision 23
+  modified_by 2 "Marcin"
+  cpp_root_dir "C:\\Dev\\UKSW\\SoftEng2025\\src\\"
+
+
+  
+  // class settings
+  default_attribute_visibility private default_relation_visibility private default_operation_visibility public
+  
+  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
+  
+  classcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  usecasediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes gradient none show_stereotype_properties no end
+  
+  sequencediagramsettings show_full_operations_definition no show_class_of_operation no write_horizontally yes instances_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes gradient none show_stereotype_properties no show_class_context_mode no show_msg_context_mode no end
+  
+  collaborationdiagramsettings show_full_operations_definition no show_class_of_operation no show_hierarchical_rank no write_horizontally yes instances_drawing_mode natural drawing_language uml package_name_in_tab no show_class_pack_context_mode no show_msg_context_mode no draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectdiagramsettings write_horizontally yes package_name_in_tab no show_class_pack_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  componentdiagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  deploymentdiagramsettings package_name_in_tab no show_context_mode no write_horizontally yes auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  statediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes write_label_horizontally yes show_trans_definition no draw_all_relations yes shadow yes gradient none
+   show_activities yes region_horizontally yes drawing_language uml show_stereotype_properties no end
+  
+  activitydiagramsettings package_name_in_tab no show_context_mode no show_opaque_action_definition no auto_label_position yes write_label_horizontally no draw_all_relations yes shadow yes gradient none
+   show_infonote yes drawing_language uml show_stereotype_properties no end
+  
+  class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white generalization_color black 
+  dpi 96
+  font_size 8
+  diagram_format A4
+
+  image_root_dir ""
+
+
+  mark_for_import
+  
+  classview 128002 "SortLibView"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    associated_deployment_view deploymentview_ref 128002 // SortLibView
+    classdiagram 128002 "SortLibDia"
+      classdiagramsettings draw_all_relations no member_max_width 0 end
+      size A4
+    end
+
+    class 128130 "SortData"
+      visibility package 
+      nformals 2
+      formal name "T" type "class" explicit_default_value ""
+        explicit_extends ""
+      formal name "Container" type "template<typename...> class" explicit_default_value "std::vector"
+        explicit_extends ""
+      cpp_decl "#include <vector>
+
+
+${comment}${template}class ${name}${inherit} {
+friend class Sorter;
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "This class acts as a wrapper around an input/output container that will be sorted using one of the child classes of SortTech. Direct access to the container should be provided through public methods."
+      attribute 128514 "m_data"
+	private explicit_type "Container<T>"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 135554 "add"
+	cpp_inline public return_type class_ref 137474 // SortError
+	nparams 1
+	  param inout name "elem" explicit_type "const T"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 135682 "add"
+	cpp_inline public return_type class_ref 137474 // SortError
+	nparams 2
+	  param in name "data" explicit_type "T*"
+	  param in name "length" explicit_type "uint"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} & ${p0}${v0}, ${t1} ${p1}${v1}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}const ${t0} & ${p0}, ${t1} ${p1}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 135810 "begin"
+	cpp_inline public explicit_return_type "typename Container<T>::iterator"
+	nparams 1
+	  param inout name "error" type class_ref 137474 // SortError
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 135938 "end"
+	cpp_inline public explicit_return_type "typename Container<T>::iterator"
+	nparams 1
+	  param in name "error" type class_ref 128130 // SortData
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}const ${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      classrelation 139906 // <dependency>
+	relation 139778 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 139906 // <dependency>
+	  b parent class_ref 137474 // SortError
+      end
+
+      classrelation 153602 // <dependency>
+	relation 153474 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 153602 // <dependency>
+	  b parent class_ref 150786 // OpState
+      end
+
+      attribute 135938 "m_state"
+	private type class_ref 150786 // OpState
+	init_value "OS_IDLE"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 143234 "notifyDone"
+	cpp_virtual cpp_inline public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "Callback method to be called by separate thread at the end of sorting operation."
+      end
+
+      classrelation 167042 // <generalisation>
+	relation 166786 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 167042 // <generalisation>
+	  b parent class_ref 163842 // SortDataBase
+      end
+
+      operation 162818 "swap"
+	cpp_inline public return_type class_ref 137474 // SortError
+	nparams 2
+	  param in name "ind_a" explicit_type "uint"
+	  param in name "ind_b" explicit_type "uint"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 162946 "setState"
+	cpp_inline public return_type class_ref 137474 // SortError
+	nparams 1
+	  param in name "state" explicit_type "const OpState"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}const ${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 129538 "SortTech"
+      visibility package 
+      nformals 2
+      formal name "T" type "class" explicit_default_value ""
+        explicit_extends ""
+      formal name "Container" type "template<typename...> class" explicit_default_value ""
+        explicit_extends ""
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "Interface class for sorting techniques."
+      operation 135426 "sort"
+	cpp_virtual cpp_inline public return_type class_ref 137474 // SortError
+	nparams 1
+	  param inout name "data" explicit_type "SortData<T, Container>"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      classrelation 140418 // <dependency>
+	relation 140290 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 140418 // <dependency>
+	  b parent class_ref 137474 // SortError
+      end
+    end
+
+    class 129922 "Radix"
+      visibility package 
+      nformals 2
+      formal name "T" type "class" explicit_default_value ""
+        explicit_extends ""
+      formal name "Container" type "template<typename...> class" explicit_default_value ""
+        explicit_extends ""
+      nactuals 2
+      actual class class_ref 129538 // SortTech
+        rank 0 explicit_value "T"
+      actual class class_ref 129538 // SortTech
+        rank 1 explicit_value "Container"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 138754 // <generalisation>
+	relation 138626 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 138754 // <generalisation>
+	  b parent class_ref 129538 // SortTech
+      end
+
+      operation 136706 "sort"
+	cpp_override cpp_inline public return_type class_ref 137474 // SortError
+	nparams 1
+	  param inout name "data" explicit_type "SortData<T>"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 130178 "Bubble"
+      visibility package 
+      nformals 2
+      formal name "T" type "class" explicit_default_value ""
+        explicit_extends ""
+      formal name "Container" type "template<typename...> class" explicit_default_value ""
+        explicit_extends ""
+      nactuals 2
+      actual class class_ref 129538 // SortTech
+        rank 0 explicit_value "T"
+      actual class class_ref 129538 // SortTech
+        rank 1 explicit_value "Container"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 138114 // <generalisation>
+	relation 137986 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 138114 // <generalisation>
+	  b parent class_ref 129538 // SortTech
+      end
+
+      operation 136194 "sort"
+	cpp_override cpp_inline public return_type class_ref 137474 // SortError
+	nparams 1
+	  param inout name "data" explicit_type "SortData<T>"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 130306 "Quick"
+      visibility package 
+      nformals 2
+      formal name "T" type "class" explicit_default_value ""
+        explicit_extends ""
+      formal name "Container" type "template<typename...> class" explicit_default_value ""
+        explicit_extends ""
+      nactuals 2
+      actual class class_ref 129538 // SortTech
+        rank 0 explicit_value "T"
+      actual class class_ref 129538 // SortTech
+        rank 1 explicit_value "Container"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 138242 // <generalisation>
+	relation 138114 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 138242 // <generalisation>
+	  b parent class_ref 129538 // SortTech
+      end
+
+      operation 136322 "sort"
+	cpp_override cpp_inline public return_type class_ref 137474 // SortError
+	nparams 1
+	  param inout name "data" explicit_type "SortData<T>"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 130434 "Insert"
+      visibility package 
+      nformals 2
+      formal name "T" type "class" explicit_default_value ""
+        explicit_extends ""
+      formal name "Container" type "template<typename...> class" explicit_default_value ""
+        explicit_extends ""
+      nactuals 2
+      actual class class_ref 129538 // SortTech
+        rank 0 explicit_value "T"
+      actual class class_ref 129538 // SortTech
+        rank 1 explicit_value "Container"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 138370 // <generalisation>
+	relation 138242 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 138370 // <generalisation>
+	  b parent class_ref 129538 // SortTech
+      end
+
+      operation 136450 "sort"
+	cpp_override cpp_inline public return_type class_ref 137474 // SortError
+	nparams 1
+	  param inout name "data" explicit_type "SortData<T>"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 130562 "Merge"
+      visibility package 
+      nformals 2
+      formal name "T" type "class" explicit_default_value ""
+        explicit_extends ""
+      formal name "Container" type "template<typename...> class" explicit_default_value ""
+        explicit_extends ""
+      nactuals 2
+      actual class class_ref 129538 // SortTech
+        rank 0 explicit_value "T"
+      actual class class_ref 129538 // SortTech
+        rank 1 explicit_value "Container"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 138626 // <generalisation>
+	relation 138498 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 138626 // <generalisation>
+	  b parent class_ref 129538 // SortTech
+      end
+
+      operation 136578 "sort"
+	cpp_override cpp_inline public return_type class_ref 137474 // SortError
+	nparams 1
+	  param inout name "data" explicit_type "SortData<T>"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 137474 "SortError"
+      visibility package stereotype "enum"
+      cpp_decl "${comment}enum ${name} {
+${items}};
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
+${items};
+${members}}
+"
+      php_decl "${comment}${visibility}final class ${name} {
+${items}}
+"
+      python_2_2 python_decl "class ${name}:
+${docstring}${members}
+"
+      idl_decl "${comment}enum ${name} {
+${items}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128258 "SE_INVALID_DATA"
+	public type class_ref 137474 // SortError
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128386 "SE_INVALID_OPERATION"
+	public type class_ref 137474 // SortError
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128898 "SE_FAILED"
+	public type class_ref 137474 // SortError
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129026 "SE_SUCCESS"
+	public type class_ref 137474 // SortError
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 137602 "SortTechFactory"
+      visibility package 
+      cpp_decl "#include <memory>
+
+${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "This class extends the \"factory\" design pattern and is responsible for selecting and creating the appropriate sorting technique. The choice of technique should be made at compile time by specializing the SortData class templates."
+      classrelation 137602 // <dependency>
+	relation 137474 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 137602 // <dependency>
+	  b parent class_ref 129538 // SortTech
+      end
+
+      operation 135298 "createSorter"
+	class_operation cpp_inline public explicit_return_type "std::unique_ptr<SortTech<T, Container>>"
+	nparams 1
+	  param out name "error" type class_ref 137474 // SortError
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	nformals 2
+	formal name "T" type "class" explicit_default_value ""
+	  explicit_extends ""
+	formal name "Container" type "template<typename...> class" explicit_default_value ""
+	  explicit_extends ""
+	
+	
+	
+	
+      end
+
+      classrelation 139010 // <dependency>
+	relation 138882 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 139010 // <dependency>
+	  b parent class_ref 130178 // Bubble
+      end
+
+      classrelation 139138 // <dependency>
+	relation 139010 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 139138 // <dependency>
+	  b parent class_ref 130306 // Quick
+      end
+
+      classrelation 139266 // <dependency>
+	relation 139138 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 139266 // <dependency>
+	  b parent class_ref 130434 // Insert
+      end
+
+      classrelation 139522 // <dependency>
+	relation 139394 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 139522 // <dependency>
+	  b parent class_ref 130562 // Merge
+      end
+
+      classrelation 139650 // <dependency>
+	relation 139522 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 139650 // <dependency>
+	  b parent class_ref 129922 // Radix
+      end
+
+      classrelation 140162 // <dependency>
+	relation 140034 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 140162 // <dependency>
+	  b parent class_ref 137474 // SortError
+      end
+
+      classrelation 147074 // <dependency>
+	relation 146946 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 147074 // <dependency>
+	  b parent class_ref 144258 // Select
+      end
+    end
+
+    class 137730 "SortSeparateData"
+      visibility package 
+      nformals 2
+      formal name "T" type "class" explicit_default_value ""
+        explicit_extends ""
+      formal name "Container" type "template<typename...> class" explicit_default_value "std::vector"
+        explicit_extends ""
+      nactuals 2
+      actual class class_ref 128130 // SortData
+        rank 0 explicit_value "T"
+      actual class class_ref 128130 // SortData
+        rank 1 explicit_value "Container"
+      cpp_decl "#ifdef _WIN32
+#ifdef BUILDING_CLIENT_DLL
+#define CLIENT_API __declspec(dllexport)
+#else
+#define CLIENT_API __declspec(dllimport)
+#endif
+#else
+// -fvisibility=hidden
+#define CLIENT_API __attribute__((visibility(\"default\")))
+#endif
+
+${comment}${template}class CLIENT_API ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "Wrapper around input container to be sorted with one of SortTech child classes. Result of the sorting will be stored in separate container."
+      classrelation 137986 // <generalisation>
+	relation 137858 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 137986 // <generalisation>
+	  b parent class_ref 128130 // SortData
+      end
+
+      attribute 128642 "m_output"
+	private explicit_type "Container<T>"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 136066 "swap"
+	cpp_inline public return_type class_ref 137474 // SortError
+	nparams 1
+	  param inout name "sorted" explicit_type "typename Container<T>"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      classrelation 140290 // <dependency>
+	relation 140162 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 140290 // <dependency>
+	  b parent class_ref 137474 // SortError
+      end
+    end
+
+    class 144258 "Select"
+      visibility package 
+      nformals 2
+      formal name "T" type "class" explicit_default_value ""
+        explicit_extends ""
+      formal name "Container" type "template<typename...> class" explicit_default_value ""
+        explicit_extends ""
+      nactuals 2
+      actual class class_ref 129538 // SortTech
+        rank 0 explicit_value "T"
+      actual class class_ref 129538 // SortTech
+        rank 1 explicit_value "Container"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 146946 // <generalisation>
+	relation 146818 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 146946 // <generalisation>
+	  b parent class_ref 129538 // SortTech
+      end
+
+      operation 149762 "sort"
+	cpp_override cpp_inline public return_type class_ref 137474 // SortError
+	nparams 1
+	  param inout name "data" explicit_type "SortData<T>"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 150786 "OpState"
+      visibility package stereotype "enum"
+      cpp_decl "${comment}enum ${name} {
+${items}};
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
+${items};
+${members}}
+"
+      php_decl "${comment}${visibility}final class ${name} {
+${items}}
+"
+      python_2_2 python_decl "class ${name}:
+${docstring}${members}
+"
+      idl_decl "${comment}enum ${name} {
+${items}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 135554 "OS_IDLE"
+	public type class_ref 150786 // OpState
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135682 "OS_RUNNING"
+	public type class_ref 150786 // OpState
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135810 "OS_DONE"
+	public type class_ref 150786 // OpState
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 157314 "Sorter"
+      visibility package 
+      cpp_decl "#include <memory>
+
+#ifdef _WIN32
+#ifdef BUILDING_CLIENT_DLL
+#define CLIENT_API __declspec(dllexport)
+#else
+#define CLIENT_API __declspec(dllimport)
+#endif
+#else
+// -fvisibility=hidden
+#define CLIENT_API __attribute__((visibility(\"default\")))
+#endif
+
+${comment}${template}class CLIENT_API ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "This class serves as the main access point to the library's interface. All sorting requests should be processed in a multithreaded manner to ensure efficiency and performance."
+      operation 156290 "sort"
+	cpp_inline public return_type class_ref 137474 // SortError
+	nparams 1
+	  param inout name "data" explicit_type "SortData<T, Container>"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	nformals 2
+	formal name "T" type "class" explicit_default_value ""
+	  explicit_extends ""
+	formal name "Container" type "template<typename...> class" explicit_default_value ""
+	  explicit_extends ""
+	
+	
+	
+	
+      end
+
+      classrelation 160386 // <dependency>
+	relation 160130 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 160386 // <dependency>
+	  b parent class_ref 137602 // SortTechFactory
+      end
+
+      classrelation 160514 // <dependency>
+	relation 160258 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 160514 // <dependency>
+	  b parent class_ref 137474 // SortError
+      end
+
+      attribute 142466 "m_queue_mutex"
+	private explicit_type "mutex"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 167170 // <dependency>
+	relation 166914 -_->
+	  a public
+	    cpp default "#include in source"
+	    classrelation_ref 167170 // <dependency>
+	  b parent class_ref 163842 // SortDataBase
+      end
+
+      classrelation 167298 // m_queue (<unidirectional association>)
+	relation 167042 --->
+	  stereotype "list"
+	  a role_name "m_queue" multiplicity "1..*" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${stereotype}<shared_ptr<${type}>> ${name}${value};
+"
+	    classrelation_ref 167298 // m_queue (<unidirectional association>)
+	  b parent class_ref 163842 // SortDataBase
+      end
+    end
+
+    class 163842 "SortDataBase"
+      visibility package 
+      cpp_decl "
+#ifdef _WIN32
+#ifdef BUILDING_CLIENT_DLL
+#define CLIENT_API __declspec(dllexport)
+#else
+#define CLIENT_API __declspec(dllimport)
+#endif
+#else
+// -fvisibility=hidden
+#define CLIENT_API __attribute__((visibility(\"default\")))
+#endif
+
+${comment}${template}class CLIENT_API ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "Interface for data wrapper class"
+      classrelation 173826 // <dependency>
+	relation 173570 -_->
+	  stereotype "use"
+	  a public
+	    cpp default "#include in header"
+	    classrelation_ref 173826 // <dependency>
+	  b parent class_ref 150786 // OpState
+      end
+    end
+  end
+
+  deploymentview 128002 "SortLibView"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128002 "SortData"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128130 // SortData
+      end
+    end
+
+    artifact 128130 "SortTech"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 129538 // SortTech
+      end
+    end
+
+    artifact 128258 "Radix"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 129922 // Radix
+      end
+    end
+
+    artifact 128386 "Bubble"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 130178 // Bubble
+      end
+    end
+
+    artifact 128514 "Quick"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 130306 // Quick
+      end
+    end
+
+    artifact 128642 "Insert"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 130434 // Insert
+      end
+    end
+
+    artifact 128770 "Merge"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 130562 // Merge
+      end
+    end
+
+    artifact 128898 "SortError"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      php_src "<?php
+${comment}
+${namespace}
+${require_once}
+${use}
+${definition}
+?>
+"
+      python_src "${comment}
+${import}
+${definition}"
+      idl_src "#ifndef ${MODULE}_${NAME}_H
+#define ${MODULE}_${NAME}_H
+
+${comment}
+${includes}
+${module_start}
+${definition}
+${module_end}
+#endif
+"
+      associated_elems
+	class_ref 137474 // SortError
+      end
+    end
+
+    artifact 129026 "SortTechFactory"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 137602 // SortTechFactory
+      end
+    end
+
+    artifact 129154 "SortSeparateData"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 137730 // SortSeparateData
+      end
+    end
+
+    artifact 129282 "Select"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 144258 // Select
+      end
+    end
+
+    artifact 129410 "OpState"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      php_src "<?php
+${comment}
+${namespace}
+${require_once}
+${use}
+${definition}
+?>
+"
+      python_src "${comment}
+${import}
+${definition}"
+      idl_src "#ifndef ${MODULE}_${NAME}_H
+#define ${MODULE}_${NAME}_H
+
+${comment}
+${includes}
+${module_start}
+${definition}
+${module_end}
+#endif
+"
+      associated_elems
+	class_ref 150786 // OpState
+      end
+    end
+
+    artifact 129538 "Sorter"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 157314 // Sorter
+      end
+    end
+
+    artifact 129666 "SortDataBase"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 163842 // SortDataBase
+      end
+    end
+  end
+end

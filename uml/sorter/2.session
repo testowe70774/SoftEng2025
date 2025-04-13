@@ -1,0 +1,14 @@
+window_sizes 1920 991 450 1464 937 0
+
+diagrams
+  active  classdiagram_ref 128002 // SortLibDia
+    1464 937 103 A4 24 0
+end
+show_stereotypes
+selected 
+package_ref 129 // sorter
+open
+  class_ref 128130 // SortData
+  class_ref 137474 // SortError
+end
+end

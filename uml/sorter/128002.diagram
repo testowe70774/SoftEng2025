@@ -1,0 +1,179 @@
+format 224
+
+classcanvas 128130 class_ref 128130 // SortData
+  classdiagramsettings member_max_width 0 end
+  xyz 483.56 54.63 2000
+end
+classcanvas 131202 class_ref 129538 // SortTech
+  classdiagramsettings member_max_width 0 end
+  xyz 686.852 769.818 2000
+end
+classcanvas 131586 class_ref 129922 // Radix
+  classdiagramsettings member_max_width 0 end
+  xyz 12.5437 771.844 2000
+end
+classcanvas 131842 class_ref 130178 // Bubble
+  classdiagramsettings member_max_width 0 end
+  xyz 594.911 535.383 2000
+end
+classcanvas 131970 class_ref 130306 // Quick
+  classdiagramsettings member_max_width 0 end
+  xyzwh 462.904 592.552 2000 51 69
+end
+classcanvas 132098 class_ref 130434 // Insert
+  classdiagramsettings member_max_width 0 end
+  xyz 310.392 609.613 2000
+end
+classcanvas 132226 class_ref 130562 // Merge
+  classdiagramsettings member_max_width 0 end
+  xyz 60.2267 683.876 2000
+end
+classcanvas 134146 class_ref 137474 // SortError
+  classdiagramsettings member_max_width 0 end
+  xyz 633.8 336.98 2000
+end
+classcanvas 134274 class_ref 137602 // SortTechFactory
+  classdiagramsettings member_max_width 0 end
+  xyz 44.62 326.15 2000
+end
+classcanvas 134914 class_ref 137730 // SortSeparateData
+  classdiagramsettings member_max_width 0 end
+  xyz 659.45 165.93 2000
+end
+classcanvas 140418 class_ref 144258 // Select
+  classdiagramsettings member_max_width 0 end
+  xyz 188.59 623.38 2000
+end
+classcanvas 141186 class_ref 150786 // OpState
+  classdiagramsettings member_max_width 0 end
+  xyz 33.62 29.6 2000
+end
+classcanvas 141442 class_ref 157314 // Sorter
+  classdiagramsettings member_max_width 0 end
+  xyz 284.79 209.29 2000
+end
+classcanvas 141954 class_ref 163842 // SortDataBase
+  classdiagramsettings member_max_width 0 end
+  xyz 287.24 63.35 2006
+end
+relationcanvas 135042 relation_ref 137858 // <generalisation>
+  from ref 134914 z 2001 to ref 128130
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135170 relation_ref 137986 // <generalisation>
+  decenter_begin 228
+  from ref 131842 z 2001 to ref 131202
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135298 relation_ref 138114 // <generalisation>
+  decenter_begin 568
+  from ref 131970 z 2001 to ref 131202
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135426 relation_ref 138242 // <generalisation>
+  decenter_begin 569
+  from ref 132098 z 2001 to ref 131202
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135682 relation_ref 138498 // <generalisation>
+  decenter_begin 606
+  from ref 132226 z 2001 to ref 131202
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135810 relation_ref 138626 // <generalisation>
+  decenter_begin 488
+  from ref 131586 z 2001 to ref 131202
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 136194 relation_ref 138882 // <dependency>
+  from ref 134274 z 2001 stereotype "<<use>>" xyz 348 467 3000 to ref 131842
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 136322 relation_ref 139010 // <dependency>
+  decenter_end 481
+  from ref 134274 z 2001 stereotype "<<use>>" xyz 279 486 3000 to ref 131970
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 136834 relation_ref 139138 // <dependency>
+  decenter_end 509
+  from ref 134274 z 2007 stereotype "<<use>>" xyz 197 495 3000 to ref 132098
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 137602 relation_ref 139394 // <dependency>
+  from ref 134274 z 2019 stereotype "<<use>>" xyz 61 529 3000 to ref 132226
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 138114 relation_ref 139522 // <dependency>
+  decenter_end 170
+  from ref 134274 z 2025 stereotype "<<use>>" xyz 29 574 3000 to ref 131586
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 139266 relation_ref 139778 // <dependency>
+  from ref 128130 z 2001 stereotype "<<use>>" xyz 582 272 3000 to ref 134146
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 139522 relation_ref 140034 // <dependency>
+  from ref 134274 z 2001 stereotype "<<use>>" xyz 365 376 3000 to ref 134146
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 139650 relation_ref 140162 // <dependency>
+  from ref 134914 z 2001 stereotype "<<use>>" xyz 687 287 3000 to ref 134146
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 139778 relation_ref 140290 // <dependency>
+  from ref 131202 z 2001 stereotype "<<use>>" xyz 695 611 3000 to ref 134146
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 140802 relation_ref 146818 // <generalisation>
+  decenter_begin 578
+  from ref 140418 z 2001 to ref 131202
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 141058 relation_ref 146946 // <dependency>
+  from ref 134274 z 2001 stereotype "<<use>>" xyz 128 501 3000 to ref 140418
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 141698 relation_ref 160130 // <dependency>
+  from ref 141442 z 2001 stereotype "<<use>>" xyz 189 296 3000 to ref 134274
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 141826 relation_ref 160258 // <dependency>
+  from ref 141442 z 2001 stereotype "<<use>>" xyz 483 307 3000 to ref 134146
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 142338 relation_ref 166786 // <generalisation>
+  from ref 128130 z 2007 to ref 141954
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 142594 relation_ref 167042 // <unidirectional association>
+  from ref 141442 z 2007 stereotype "<<list>>" xyz 313 153 3000 to ref 141954
+  role_a_pos 345 111 3000 no_role_b
+  multiplicity_a_pos 306 111 3000 no_multiplicity_b
+end
+relationcanvas 142722 relation_ref 173570 // <dependency>
+  from ref 141954 z 2007 stereotype "<<use>>" xyz 178 81 3000 to ref 141186
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+preferred_whz 1341 767 0.99
+end
