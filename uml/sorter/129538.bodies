@@ -1,0 +1,3 @@
+class SortTech
+!!!135426.cpp!!!	sort(inout data : SortData<T, Container>) : SortError
+return SE_SUCCESS;

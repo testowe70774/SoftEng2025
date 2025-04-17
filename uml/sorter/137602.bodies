@@ -1,0 +1,4 @@
+class SortTechFactory
+!!!135298.cpp!!!	createSorter(out error : SortError) : std::unique_ptr<SortTech<T, Container>>
+error=SE_SUCCESS;
+return nullptr;

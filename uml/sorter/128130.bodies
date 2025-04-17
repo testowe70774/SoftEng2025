@@ -1,0 +1,10 @@
+class SortData
+!!!135554.cpp!!!	add(inout elem : const T) : SortError
+return SE_SUCCESS;
+!!!135682.cpp!!!	add(in data : T*, in length : uint) : SortError
+return SE_SUCCESS;
+!!!162818.cpp!!!	swap(in ind_a : uint, in ind_b : uint) : SortError
+return SE_SUCCESS;
+!!!162946.cpp!!!	setState(in state : const OpState) : SortError
+m_state=state;
+return SE_SUCCESS;

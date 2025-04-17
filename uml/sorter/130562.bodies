@@ -1,0 +1,3 @@
+class Merge
+!!!136578.cpp!!!	sort(inout data : SortData<T>) : SortError
+return SE_SUCCESS;

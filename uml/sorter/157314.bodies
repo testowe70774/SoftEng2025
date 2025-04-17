@@ -1,0 +1,3 @@
+class SortLibIface
+!!!156290.cpp!!!	sort(inout data : SortData<T, Container>) : SortError
+return SE_SUCCESS;
