@@ -47,20 +47,27 @@ public:
 };
 template<class T, template<typename...> class Container>
 inline SortError SortData<T, Container>::add(const T& elem) {
+  m_data.push_back(elem);
   return SE_SUCCESS;
 }
 
 template<class T, template<typename...> class Container>
 inline SortError SortData<T, Container>::add(const T*& data, unsigned int length) {
+  for (unsigned i = 0; i < length; i++)
+  {
+    m_data.push_back(data[i]);
+  }
   return SE_SUCCESS;
 }
 
 template<class T, template<typename...> class Container>
 inline typename Container<T>::iterator SortData<T, Container>::begin(SortError& error) {
+  return m_data.begin();
 }
 
 template<class T, template<typename...> class Container>
 inline typename Container<T>::iterator SortData<T, Container>::end(const SortData<T, Container>& error) {
+  return m_data.end();
 }
 
 //Callback method to be called by separate thread at the end of sorting operation.
@@ -89,6 +96,5 @@ inline SortError SortData<T, Container>::setState(const const OpState& state) {
   m_state = state;
   return SE_SUCCESS;
 }
-
 
 #endif

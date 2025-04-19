@@ -1,7 +1,6 @@
 #ifndef _SORTTECHFACTORY_H
 #define _SORTTECHFACTORY_H
 
-
 #include "SortTech.h"
 #include "SortError.h"
 #include "Bubble.h"
@@ -34,6 +33,10 @@ inline std::unique_ptr<SortTech<T, Container>> SortTechFactory::createSorter(Sor
   if (std::is_same<T, float>::value && is_std_vector<Container>::value)
   {
       return std::make_unique<Quick<T, Container>>();
+  }
+  else if (std::is_same<T, int>::value && is_std_vector<Container>::value)
+  {
+    return std::make_unique<Radix<T, Container>>();
   }
 
   return nullptr;

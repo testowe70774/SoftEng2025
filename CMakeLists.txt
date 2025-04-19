@@ -23,8 +23,8 @@ set(SOURCES
 	src/Select.cpp
 	src/SortData.cpp
 	src/SortDataBase.cpp
-	src/SortError.cpp
 	src/Sorter.cpp
+	src/SortError.cpp
 	src/SortSeparateData.cpp
 	src/SortTech.cpp
 	src/SortTechFactory.cpp
@@ -40,8 +40,8 @@ set(HEADERS
 	src/Select.h
 	src/SortData.h
 	src/SortDataBase.h
-	src/SortError.h
 	src/Sorter.h
+	src/SortError.h
 	src/SortSeparateData.h
 	src/SortTech.h
 	src/SortTechFactory.h
@@ -68,5 +68,10 @@ add_executable(test_sort2 src/tests/test_sort2.cpp)
 target_link_libraries(test_sort2 gtest gtest_main SortLib)
 target_include_directories(test_sort2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
 
+add_executable(test_radix src/tests/test_radix.cpp)
+target_link_libraries(test_radix gtest gtest_main SortLib)
+target_include_directories(test_radix PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
+
 add_test(NAME test_sort1 COMMAND test_sort1)
 add_test(NAME test_sort2 COMMAND test_sort2)
+add_test(NAME test_radix COMMAND test_radix)
