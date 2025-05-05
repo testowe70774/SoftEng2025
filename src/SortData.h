@@ -18,13 +18,19 @@ friend class Sorter;
 
 
   public:
-    inline SortError add(const T & elem);
+  inline SortError add(const T& elem);
 
-    inline SortError add(const T* & data, unsigned int length);
+  inline SortError add(const T*& data, unsigned int length);
 
-    inline typename Container<T>::iterator begin(SortError & error);
+  inline typename Container<T>::iterator begin(SortError& error);
 
-    inline typename Container<T>::iterator end(const SortData<T, Container> & error);
+  inline typename Container<T>::iterator end(SortError& error);
+
+
+
+  Container<T>& data() {
+    return m_data;
+  }
 
 
   private:
@@ -37,7 +43,7 @@ friend class Sorter;
 
     inline SortError swap(unsigned int ind_a, unsigned int ind_b);
 
-    inline SortError setState(const const OpState & state);
+  inline SortError setState(const OpState& state);
 
 };
 template<class T, template<typename...> class Container>
@@ -55,7 +61,7 @@ inline typename Container<T>::iterator SortData<T, Container>::begin(SortError &
 }
 
 template<class T, template<typename...> class Container>
-inline typename Container<T>::iterator SortData<T, Container>::end(const SortData<T, Container> & error) {
+inline typename Container<T>::iterator SortData<T, Container>::end(SortError& error) {
 }
 
 //Callback method to be called by separate thread at the end of sorting operation.
@@ -69,7 +75,7 @@ inline SortError SortData<T, Container>::swap(unsigned int ind_a, unsigned int i
 }
 
 template<class T, template<typename...> class Container>
-inline SortError SortData<T, Container>::setState(const const OpState & state) {
+inline SortError SortData<T, Container>::setState(const OpState & state) {
   m_state=state;
   return SE_SUCCESS;
 }

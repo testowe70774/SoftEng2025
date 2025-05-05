@@ -9,11 +9,11 @@
 template<class T, template<typename...> class Container>
 class Radix : public SortTech<T, Container> {
   public:
-    inline SortError sort(SortData<T> & data) override;
+    inline SortError sort(SortData<T, Container> & data) override;
 
 };
 template<class T, template<typename...> class Container>
-inline SortError Radix<T, Container>::sort(SortData<T> & data) {
+inline SortError Radix<T, Container>::sort(SortData<T, Container> & data) {
   return SE_SUCCESS;
 }
 
