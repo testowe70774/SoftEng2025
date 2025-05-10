@@ -13,7 +13,7 @@ class Bubble : public SortTech<T, Container> {
 };
 
 template<class T, template<typename...> class Container>
-inline SortError Bubble<T, Container>::sort(SortData<T> & data) {
+inline SortError Bubble<T, Container>::sort(SortData<T, Container> & data) {
 
   SortError error = SE_SUCCESS;
 
