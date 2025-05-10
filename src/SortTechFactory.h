@@ -13,6 +13,16 @@
 
 #include <memory>
 
+enum SortTechType {
+  STT_NONE=0,
+  STT_BUBBLE,
+  STT_INSERT,
+  STT_MERGE,
+  STT_QUICK,
+  STT_RADIX,
+  STT_SELECT
+};
+
 //This class extends the "factory" design pattern and is responsible for selecting and creating the appropriate sorting technique. The choice of technique should be made at compile time by specializing the SortData class templates.
 class SortTechFactory {
   public:

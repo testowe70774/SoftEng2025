@@ -28,7 +28,7 @@ class SortDataBase;
 //This class serves as the main access point to the library's interface. All sorting requests should be processed in a multithreaded manner to ensure efficiency and performance.
 class CLIENT_API Sorter {
   public:
-    template<class T, template<typename...> class Container>
+    template<class T, template<typename...> class Container, SortTechType TT = STT_NONE>
     inline SortError sort(SortData<T, Container> & data);
 
 
@@ -38,7 +38,7 @@ class CLIENT_API Sorter {
     list<shared_ptr<SortDataBase>> m_queue;
 
 };
-template<class T, template<typename...> class Container>
+template<class T, template<typename...> class Container, SortTechType TT>
 inline SortError Sorter::sort(SortData<T, Container> & data) {
   return SE_SUCCESS;
 }
