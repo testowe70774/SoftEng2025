@@ -1,7 +1,6 @@
 #ifndef _SORTSEPARATEDATA_H
 #define _SORTSEPARATEDATA_H
 
-
 #include "SortData.h"
 #include "SortError.h"
 
@@ -11,7 +10,6 @@ template <class T, template <typename...> class Container = std::vector>
 class SortSeparateData : public SortData<T, Container> {
 private:
     Container<T> m_output;
-
 
 public:
     inline SortError swap(Container<T>& sorted);
