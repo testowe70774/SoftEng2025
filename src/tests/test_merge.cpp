@@ -5,11 +5,11 @@
 
 TEST(test_merge, AddFunction)
 {
-  SortError error = SE_SUCCESS;
+    SortError error = SE_SUCCESS;
 
-  // add your test here
+    // add your test here
 
-  ASSERT_EQ(error, SE_SUCCESS);
+    ASSERT_EQ(error, SE_SUCCESS);
 }
 
 
