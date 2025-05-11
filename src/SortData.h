@@ -6,6 +6,7 @@
 #include "SortDataBase.h"
 
 #include <array>
+#include <cstddef>
 #include <list>
 #include <vector>
 

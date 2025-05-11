@@ -11,7 +11,7 @@
 
 using namespace std;
 
-template<class T, template<typename...> class Container> class SortData;
+template <class T, template <typename...> class Container> class SortData;
 class SortDataBase;
 
 #include <memory>
@@ -27,43 +27,44 @@ class SortDataBase;
 #define CLIENT_API __attribute__((visibility("default")))
 #endif
 
-//This class serves as the main access point to the library's interface. All sorting requests should be processed in a multithreaded manner to ensure efficiency and performance.
+// This class serves as the main access point to the library's interface. All
+// sorting requests should be processed in a multithreaded manner to ensure
+// efficiency and performance.
 class CLIENT_API Sorter {
-  public:
-    template<class T, template<typename...> class Container, SortTechType TT = STT_NONE>
-    inline SortError sort(SortData<T, Container> & data);
+public:
+    template <class T, template <typename...> class Container,
+              SortTechType TT = STT_NONE>
+    inline SortError sort(SortData<T, Container>& data);
 
 
-  private:
+private:
     mutex m_queue_mutex;
 
     list<shared_ptr<SortDataBase>> m_queue;
-
 };
-template<class T, template<typename...> class Container, SortTechType TT>
-inline SortError Sorter::sort(SortData<T, Container> & data) {
+template <class T, template <typename...> class Container, SortTechType TT>
+inline SortError Sorter::sort(SortData<T, Container>& data)
+{
 
-  SortError error = SE_SUCCESS;
+    SortError error = SE_SUCCESS;
 
-  data.setState(OS_RUNNING);
+    data.setState(OS_RUNNING);
 
-  auto tech = SortTechFactory::createSorter<T, Container, TT>(error);
+    auto tech = SortTechFactory::createSorter<T, Container, TT>(error);
 
-  if (error != SE_SUCCESS)
-    return error;
+    if (error != SE_SUCCESS) return error;
 
-  auto sort_thread = [&]()
-  {
-    tech->sort(data);
+    auto sort_thread = [&]() {
+        tech->sort(data);
 
-    data.setState(OS_DONE);
+        data.setState(OS_DONE);
 
-    data.notifyDone();
-  };
+        data.notifyDone();
+    };
 
-  std::async(std::launch::async, sort_thread);
+    std::async(std::launch::async, sort_thread);
 
-  return SE_SUCCESS;
+    return SE_SUCCESS;
 }
 
 #endif
