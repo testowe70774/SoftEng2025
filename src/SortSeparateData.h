@@ -13,7 +13,7 @@ class SortSeparateData : public SortData<T, Container> {
 
 
   public:
-    inline SortError swap(typename Container<T> & sorted);
+    inline SortError swap(Container<T> & sorted);
 
     Container<T>& output() {
       return m_output;
@@ -22,7 +22,7 @@ class SortSeparateData : public SortData<T, Container> {
 
 };
 template<class T, template<typename...> class Container>
-inline SortError SortSeparateData<T, Container>::swap(typename Container<T> & sorted) {
+inline SortError SortSeparateData<T, Container>::swap(Container<T> & sorted) {
   return SE_SUCCESS;
 }
 
