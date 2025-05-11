@@ -33,10 +33,10 @@ public:
 
     T& operator[](unsigned int ind)
     {
-        if constexpr (is_std_vector<Container>::value)
+        if (is_std_vector<Container>::value)
             return m_data[ind];
-        else if constexpr (is_std_list<Container>::value
-                           || is_std_deque<Container>::value)
+        else if (is_std_list<Container>::value
+                 || is_std_deque<Container>::value)
         {
             auto it = m_data.begin();
             std::advance(it, ind);
