@@ -8,11 +8,11 @@
 template <class T, template <typename...> class Container>
 class Select : public SortTech<T, Container> {
 public:
-  inline SortError sort(SortData<T, Container> &data) override;
+  inline SortError sort(SortData<T> &data) override;
 };
-
 template <class T, template <typename...> class Container>
-inline SortError Select<T, Container>::sort(SortData<T, Container> &data) {
+inline SortError Select<T, Container>::sort(SortData<T> &data) {
+
   size_t n = data.size();
 
   for (size_t i = 0; i < n; ++i) {
@@ -29,3 +29,5 @@ inline SortError Select<T, Container>::sort(SortData<T, Container> &data) {
 
   return SE_SUCCESS;
 }
+
+#endif
