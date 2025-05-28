@@ -24,7 +24,7 @@ enum SortTechType
     STT_SELECT
 };
 
-template <template <typename...> class Container>
+/* template <template <typename...> class Container>
 struct is_std_vector : std::false_type
 {
 };
@@ -52,7 +52,7 @@ struct is_std_deque : std::false_type
 template <> struct is_std_deque<std::deque> : std::true_type
 {
 };
-
+*/
 
 // This class extends the "factory" design pattern and is responsible for
 // selecting and creating the appropriate sorting technique. The choice of
