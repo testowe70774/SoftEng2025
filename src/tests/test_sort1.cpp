@@ -1,62 +1,75 @@
 #include <gtest/gtest.h>
-#include <vector>        // potrzebne, bo używamy std::vector
-#include "Sorter.h"      
-
+#include <vector> // potrzebne, bo używamy std::vector
+#include "Sorter.h"
+#include "SortData.h" // potrzebne, bo sorter.sort(...) przyjmuje SortData<...>&
 
 TEST(test_sort1, AddFunction)
 {
     Sorter* sorter = new Sorter();
-	ASSERT_NE(sorter, nullptr);
-    
+    ASSERT_NE(sorter, nullptr) << "Na stercie powinien powstać obiekt Sorter";
+
     delete sorter;
     sorter = nullptr;
-    
-    ASSERT_EQ(sorter, nullptr);
+    ASSERT_EQ(sorter, nullptr) << "Po usunięciu wskaźnik powinien być nullptr";
 }
 
-// Test 1: Domyślna technika sortuje wektor int rosnąco 
+// --- Test 1: domyślna technika sortowania dla intów ---
 TEST(test_sort1, DefaultTechniqueSortsInt)
 {
-    // Przygotowujemy nieposortowany wektor intów
-    std::vector<int> v{5, 1, 4, 2, 3};
+    // 1) przygotowujemy nieposortowany kontener intów
+    std::vector<int> v{ 5, 1, 4, 2, 3 };
+
+    SortData<int, std::vector> data(v);
     Sorter sorter;
 
-    sorter.sort(v);
+    // 2) wywołujemy sortowanie
+    SortError err = sorter.sort(data);
+    ASSERT_EQ(err, SE_SUCCESS) << "sort() powinien zwrócić SE_SUCCESS";
 
-    // Weryfikujemy, że każdy element jest >= poprzedniego
-    for (size_t i = 1; i < v.size(); ++i) {
-        ASSERT_LE(v[i-1], v[i]) << "Wektor intów nie jest posortowany na pozycji " << i;
+    // 3) sprawdzamy, czy wynik jest posortowany
+    const auto& sorted = data.getData();
+    for (size_t i = 1; i < sorted.size(); ++i)
+    {
+        ASSERT_LE(sorted[i - 1], sorted[i])
+            << "Wektor intów nie jest posortowany na pozycji " << i;
     }
 }
 
-// Test 2: Domyślna technika sortuje wektor floatów rosnąco 
+// --- Test 2: domyślna technika sortowania dla floatów ---
 TEST(test_sort1, DefaultTechniqueSortsFloat)
 {
-    // Przygotowujemy nieposortowany wektor floatów
-    std::vector<float> v{3.14f, 2.71f, 0.0f, -1.0f, 1.23f};
+    std::vector<float> v{ 3.14f, 2.71f, 0.0f, -1.0f, 1.23f };
+    SortData<float, std::vector> data(v);
     Sorter sorter;
 
-    sorter.sort(v);
+    SortError err = sorter.sort(data);
+    ASSERT_EQ(err, SE_SUCCESS) << "sort() powinien zwrócić SE_SUCCESS";
 
-    for (size_t i = 1; i < v.size(); ++i) {
-        ASSERT_LE(v[i-1], v[i]) << "Wektor floatów nie jest posortowany na pozycji " << i;
+    const auto& sorted = data.getData();
+    for (size_t i = 1; i < sorted.size(); ++i)
+    {
+        ASSERT_LE(sorted[i - 1], sorted[i])
+            << "Wektor floatów nie jest posortowany na pozycji " << i;
     }
 }
 
-//  Test 3: Domyślna technika sortuje wektor double rosnąco 
+// --- Test 3: domyślna technika sortowania dla double ---
 TEST(test_sort1, DefaultTechniqueSortsDouble)
 {
-    // Przygotowujemy nieposortowany wektor double
-    std::vector<double> v{9.99, 3.33, 7.77, 1.11, 5.55};
+    std::vector<double> v{ 9.99, 3.33, 7.77, 1.11, 5.55 };
+    SortData<double, std::vector> data(v);
     Sorter sorter;
 
-    sorter.sort(v);
+    SortError err = sorter.sort(data);
+    ASSERT_EQ(err, SE_SUCCESS) << "sort() powinien zwrócić SE_SUCCESS";
 
-    for (size_t i = 1; i < v.size(); ++i) {
-        ASSERT_LE(v[i-1], v[i]) << "Wektor double nie jest posortowany na pozycji " << i;
+    const auto& sorted = data.getData();
+    for (size_t i = 1; i < sorted.size(); ++i)
+    {
+        ASSERT_LE(sorted[i - 1], sorted[i])
+            << "Wektor double nie jest posortowany na pozycji " << i;
     }
 }
-
 
 int main(int argc, char** argv)
 {
