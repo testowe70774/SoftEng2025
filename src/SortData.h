@@ -8,6 +8,27 @@
 #include <array>
 #include <list>
 #include <vector>
+#include <deque>
+#include <cstddef>
+#include <type_traits>
+
+template <typename T>
+struct is_std_vector : std::false_type {};
+
+template <typename... Args>
+struct is_std_vector<std::vector<Args...>> : std::true_type {};
+
+template <typename T>
+struct is_std_list : std::false_type {};
+
+template <typename... Args>
+struct is_std_list<std::list<Args...>> : std::true_type {};
+
+template <typename T>
+struct is_std_deque : std::false_type {};
+
+template <typename... Args>
+struct is_std_deque<std::deque<Args...>> : std::true_type {};
 
 
 //This class acts as a wrapper around an input/output container that will be sorted using one of the child classes of SortTech. Direct access to the container should be provided through public methods.

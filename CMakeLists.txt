@@ -1,7 +1,7 @@
 ﻿cmake_minimum_required(VERSION 3.10)
 project(SortLib)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 if(MSVC)
@@ -58,7 +58,7 @@ target_compile_definitions(SortLib PRIVATE BUILDING_CLIENT_DLL)
 enable_testing()
 
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-add_subdirectory(externals/googletest)
+add_subdirectory(C:/Users/dell/SoftEng2025/externals/googletest)
 
 add_executable(test_sort1 src/tests/test_sort1.cpp)
 target_link_libraries(test_sort1 gtest gtest_main SortLib)

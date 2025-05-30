@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\test_quick.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\test_quick.dir/objects.a @CMakeFiles\test_quick.dir\objects1.rsp
+C:\msys64\ucrt64\bin\g++.exe  -fPIC -g -Wl,--whole-archive CMakeFiles\test_quick.dir/objects.a -Wl,--no-whole-archive -o test_quick.exe -Wl,--out-implib,libtest_quick.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\test_quick.dir\linkLibs.rsp

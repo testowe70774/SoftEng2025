@@ -1,0 +1,158 @@
+[
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\Bubble.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\Bubble.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/Bubble.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/Bubble.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\Insert.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\Insert.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/Insert.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/Insert.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\Merge.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\Merge.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/Merge.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/Merge.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\OpState.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\OpState.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/OpState.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/OpState.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\Quick.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\Quick.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/Quick.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/Quick.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\Radix.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\Radix.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/Radix.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/Radix.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\Select.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\Select.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/Select.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/Select.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\SortData.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\SortData.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/SortData.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/SortData.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\SortDataBase.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\SortDataBase.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/SortDataBase.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/SortDataBase.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\Sorter.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\Sorter.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/Sorter.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/Sorter.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\SortError.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\SortError.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/SortError.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/SortError.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\SortSeparateData.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\SortSeparateData.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/SortSeparateData.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/SortSeparateData.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\SortTech.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\SortTech.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/SortTech.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/SortTech.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBUILDING_CLIENT_DLL -DSortLib_EXPORTS   -fPIC -g -std=gnu++17 -o CMakeFiles\\SortLib.dir\\src\\SortTechFactory.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\SortTechFactory.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/SortTechFactory.cpp",
+  "output": "CMakeFiles/SortLib.dir/src/SortTechFactory.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/test_sort1.dir/includes_CXX.rsp  -fPIC -g -std=gnu++17 -o CMakeFiles\\test_sort1.dir\\src\\tests\\test_sort1.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\tests\\test_sort1.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/tests/test_sort1.cpp",
+  "output": "CMakeFiles/test_sort1.dir/src/tests/test_sort1.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/test_sort2.dir/includes_CXX.rsp  -fPIC -g -std=gnu++17 -o CMakeFiles\\test_sort2.dir\\src\\tests\\test_sort2.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\tests\\test_sort2.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/tests/test_sort2.cpp",
+  "output": "CMakeFiles/test_sort2.dir/src/tests/test_sort2.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/test_radix.dir/includes_CXX.rsp  -fPIC -g -std=gnu++17 -o CMakeFiles\\test_radix.dir\\src\\tests\\test_radix.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\tests\\test_radix.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/tests/test_radix.cpp",
+  "output": "CMakeFiles/test_radix.dir/src/tests/test_radix.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/test_merge.dir/includes_CXX.rsp  -fPIC -g -std=gnu++17 -o CMakeFiles\\test_merge.dir\\src\\tests\\test_merge.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\tests\\test_merge.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/tests/test_merge.cpp",
+  "output": "CMakeFiles/test_merge.dir/src/tests/test_merge.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/test_select.dir/includes_CXX.rsp  -fPIC -g -std=gnu++17 -o CMakeFiles\\test_select.dir\\src\\tests\\test_select.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\tests\\test_select.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/tests/test_select.cpp",
+  "output": "CMakeFiles/test_select.dir/src/tests/test_select.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/test_bubble.dir/includes_CXX.rsp  -fPIC -g -std=gnu++17 -o CMakeFiles\\test_bubble.dir\\src\\tests\\test_bubble.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\tests\\test_bubble.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/tests/test_bubble.cpp",
+  "output": "CMakeFiles/test_bubble.dir/src/tests/test_bubble.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/test_quick.dir/includes_CXX.rsp  -fPIC -g -std=gnu++17 -o CMakeFiles\\test_quick.dir\\src\\tests\\test_quick.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\tests\\test_quick.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/tests/test_quick.cpp",
+  "output": "CMakeFiles/test_quick.dir/src/tests/test_quick.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/test_insert.dir/includes_CXX.rsp  -fPIC -g -std=gnu++17 -o CMakeFiles\\test_insert.dir\\src\\tests\\test_insert.cpp.obj -c C:\\Users\\dell\\SoftEng2025\\src\\tests\\test_insert.cpp",
+  "file": "C:/Users/dell/SoftEng2025/src/tests/test_insert.cpp",
+  "output": "CMakeFiles/test_insert.dir/src/tests/test_insert.cpp.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build/externals/googletest/googlemock",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/gmock.dir/includes_CXX.rsp  -fPIC -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c C:\\Users\\dell\\SoftEng2025\\externals\\googletest\\googlemock\\src\\gmock-all.cc",
+  "file": "C:/Users/dell/SoftEng2025/externals/googletest/googlemock/src/gmock-all.cc",
+  "output": "externals/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build/externals/googletest/googlemock",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/gmock_main.dir/includes_CXX.rsp  -fPIC -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c C:\\Users\\dell\\SoftEng2025\\externals\\googletest\\googlemock\\src\\gmock_main.cc",
+  "file": "C:/Users/dell/SoftEng2025/externals/googletest/googlemock/src/gmock_main.cc",
+  "output": "externals/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build/externals/googletest/googletest",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/gtest.dir/includes_CXX.rsp  -fPIC -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c C:\\Users\\dell\\SoftEng2025\\externals\\googletest\\googletest\\src\\gtest-all.cc",
+  "file": "C:/Users/dell/SoftEng2025/externals/googletest/googletest/src/gtest-all.cc",
+  "output": "externals/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
+},
+{
+  "directory": "C:/Users/dell/SoftEng2025/build/externals/googletest/googletest",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/gtest_main.dir/includes_CXX.rsp  -fPIC -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c C:\\Users\\dell\\SoftEng2025\\externals\\googletest\\googletest\\src\\gtest_main.cc",
+  "file": "C:/Users/dell/SoftEng2025/externals/googletest/googletest/src/gtest_main.cc",
+  "output": "externals/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj"
+}
+]

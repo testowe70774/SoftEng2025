@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\SortLib.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\SortLib.dir/objects.a @CMakeFiles\SortLib.dir\objects1.rsp
+C:\msys64\ucrt64\bin\g++.exe  -fPIC -g -shared -o libSortLib.dll -Wl,--out-implib,libSortLib.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\SortLib.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\SortLib.dir\linkLibs.rsp
